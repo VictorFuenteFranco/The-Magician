@@ -10,4 +10,9 @@ public class ControlEscenas : MonoBehaviour
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene + 1);
     }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
