@@ -7,40 +7,29 @@ using UnityEngine.UI;
 public class AdivinaNumero : MonoBehaviour { 
 
     //Atributos de la clase
-    //Min y Max
-    int min; 
-    int max;
-    TextMeshProUGUI guessOnText;
+    [SerializeField] Text guessOnText;
+    int min = VariablesGlobales.min; 
+    int max = VariablesGlobales.max;
     int guess_number;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        guess_number = Random.Range(min, max);
+        guessOnText.text = "" + guess_number;
     }
 
-    void mayorNumero()
+    public void mayorNumero()
     {
-        
-        
+        min = guess_number;
+        guess_number = (min + max) /2;
+        guessOnText.text = "" + guess_number;
     }
 
-    void menorNumero()
+    public void menorNumero()
     {
-
-    }
-
-    void numero()
-    {
-        guess_number = (max + min) / 2;
-    }
-
-    public void minNum(GameObject num) { 
-        string text = num.GetComponent<Text>().text;
-        min = int.Parse(text);
-    } 
-    public void maxNum(GameObject num) {
-        string text = num.GetComponent<Text>().text;
-        max = int.Parse(text);
+        max = guess_number;
+        guess_number = (min + max) / 2;
+        guessOnText.text = "" + guess_number;
     }
 }

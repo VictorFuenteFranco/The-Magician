@@ -15,4 +15,14 @@ public class ControlEscenas : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void LoadWin()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void LoadLose()
+    {
+        SceneManager.LoadScene(4);
+    }
 }
