@@ -24,22 +24,14 @@ public class Idioma_Game : MonoBehaviour
 
     void Start()
     {
-        Rango.SetActive(true);
-        Rango_Ing.SetActive(false);
-        From.SetActive(true);
-        From_Ing.SetActive(false);
-        To.SetActive(true);
-        To_Ing.SetActive(false);
-        PickNumber.SetActive(true);
-        PickNumber_Ing.SetActive(false);
-        Listo.SetActive(true);
-        Listo_Ing.SetActive(false);
-        Listo_Si.SetActive(true);
-        Listo_Si_Ing.SetActive(false);
-        Español.SetActive(true);
-        Español_Ing.SetActive(false);
-        Ingles.SetActive(true);
-        Ingles_Ing.SetActive(false);
+        if (VariablesGlobales.idioma.Equals("español"))
+        {
+            español();
+        }
+        else
+        {
+            ingles();
+        }
     }
 
     public void ingles()

@@ -25,4 +25,9 @@ public class ControlEscenas : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

@@ -16,14 +16,7 @@ public class Idioma : MonoBehaviour
 
     void Start()
     {
-        this.Boton_Start.SetActive(true);
-        this.Boton_Start_Ing.SetActive(false);
-        this.Boton_Exit.SetActive(true);
-        this.Boton_Exit_Ing.SetActive(false);
-        this.Boton_Ingles.SetActive(true);
-        this.Boton_Ingles_Ing.SetActive(false);
-        this.Boton_Español.SetActive(true);
-        this.Boton_Español_Ing.SetActive(false);
+        español();
     }
 
     public void ingles()
@@ -36,6 +29,7 @@ public class Idioma : MonoBehaviour
         this.Boton_Ingles_Ing.SetActive(true);
         this.Boton_Español.SetActive(false);
         this.Boton_Español_Ing.SetActive(true);
+        VariablesGlobales.idioma = "ingles";
     }
 
     public void español() 
@@ -48,6 +42,7 @@ public class Idioma : MonoBehaviour
         this.Boton_Ingles_Ing.SetActive(false);
         this.Boton_Español.SetActive(true);
         this.Boton_Español_Ing.SetActive(false);
+        VariablesGlobales.idioma = "español";
     }
 
 

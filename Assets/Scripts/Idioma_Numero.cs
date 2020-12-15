@@ -18,16 +18,14 @@ public class Idioma_Numero : MonoBehaviour
 
     void Start()
     {
-        Rango.SetActive(true);
-        Rango_Ing.SetActive(false);
-        From.SetActive(true);
-        From_Ing.SetActive(false);
-        To.SetActive(true);
-        To_Ing.SetActive(false);
-        PickNumber.SetActive(true);
-        PickNumber_Ing.SetActive(false);
-        Listo.SetActive(true);
-        Listo_Ing.SetActive(false);
+        if (VariablesGlobales.idioma.Equals("español"))
+        {
+            español();
+        }
+        else
+        {
+            ingles();
+        }
     }
 
     public void español()
