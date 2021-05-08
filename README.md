@@ -1,2 +1,2 @@
-# AdivinadoDerNumeros
- Mini-juego en el que el jugador piensa un número y se lo tenemos que adivinar
+# The Magician
+Minigame created with the Unity 3D video game engine.
